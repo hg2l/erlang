@@ -1,0 +1,32 @@
+* SYMBOL
+| $a       | 代表字符 a 的整数 |
+| ?TIMEOUT | ??                |
+
+* QUICKSTART
+1. install
+   #+BEGIN_SRC shell
+brew install erlang
+   #+END_SRC
+
+2. hello
+   #+BEGIN_SRC erlang
+-module(hello).
+-export([hello/0]).
+
+hello() ->
+    io:format("Hello").
+   #+END_SRC
+
+3. run
+   #+BEGIN_SRC shell
+erlc hello.erl
+erl -noshell -s hello hello -s init stop
+   #+END_SRC
+
+* EXAMPLES
+1. make hello :: hello world
+2. make fs :: fileserver & file client
+
+* LINKS
+- [[https://erldoc.com/][Erlang 中文手册]]
+- [[http://www.cnblogs.com/zhengsyao/p/how_erlang_does_scheduling_translation.html][Erlang 的调度原理（译文）]]
